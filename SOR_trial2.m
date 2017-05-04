@@ -52,7 +52,7 @@ flag = 0;
 end
 
 function [ M, N, b ] = matsep(A, b, w)
-
+%SOR process is housed in here
  b = w * b;
  M =  w * tril(A, -1) + diag(diag(A));
  N = -w * triu(A,  1) + (1.0 - w) * diag(diag(A));
