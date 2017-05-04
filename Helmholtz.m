@@ -23,3 +23,4 @@ end
 u(1,:)=u(2,2); u(n,:)=u(n-1,n-1);
 U=u
 mesh(U)
+[Solution,Error_estimate,Number_of_iterations,flag]=SOR_trial1(U,zeros(n,1),F1,1,1e4,1e-4)
